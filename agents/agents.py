@@ -99,7 +99,6 @@ def call_internet_search_tool(state):
     query = tool_input["query"]
     query = "Company name: " + state["company_name"] + " - " + query
     query = "{" + '"query": "' + query + '"' + "}"
-    # print(query)
 
     action = ToolInvocation(
         tool='tavily_search_results_json',
@@ -186,14 +185,12 @@ def get_imbot():
 
 if __name__ == "__main__":
     questions = [
-        # 'What is the company name?',
-        # 'What is the company industry?',
+        'What is the company name?',
+        'What is the company industry?',
         'Generate the report for me',
-        # 'Provide an overview of the management team and key personnel.',
-        # 'Add any other relevant information about the company, relevant for this overview.',
+        'Provide an overview of the management team and key personnel.',
+        'Add any other relevant information about the company, relevant for this overview.',
     ]
-
-    # bot = get_print_or_answer_bot()
 
     bot = get_imbot()
 

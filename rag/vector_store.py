@@ -3,7 +3,7 @@ from pinecone import Pinecone, PodSpec
 
 
 def create_pinecone_index(index_name: str, dimension: int) -> bool:
-    """Create pinecone index if index with name index_name does not exist yet."""
+    """Create the pinecone index if index_name does not exist."""
     pinecone_client = Pinecone()
 
     if index_name not in pinecone_client.list_indexes().names():
